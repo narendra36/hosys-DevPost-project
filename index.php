@@ -1,4 +1,10 @@
 <?php
   phpinfo();
-  echo "hii narendra"
+  //echo "hii narendra"
 ?>
+<html>
+  <body>
+    <h1>Hello World!!</h1>
+  </body>
+</html>
+
