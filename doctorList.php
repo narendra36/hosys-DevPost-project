@@ -68,7 +68,7 @@ $dbuser = getenv("MYSQL_USER");
 $dbpwd = getenv("MYSQL_PASSWORD");
 $dbname = getenv("MYSQL_DATABASE");
 
-$conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+$conn = new mysqli($dbhost, "root", "root", "HosAppointmentSys");
 		$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
 		if($conn->query($sql) === TRUE)
 		{
