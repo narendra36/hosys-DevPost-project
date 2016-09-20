@@ -44,14 +44,30 @@
 		</ul>
 	</div>
 	<?php
-		$servername = "http://mysql-myapp.0ec9.hackathon.openshiftapps.com/opt/app-root/src/";
+		/*$servername = "http://mysql-myapp.0ec9.hackathon.openshiftapps.com/opt/app-root/src/";
 		$username = "root";
 		$password = "root";
 		$dbname = "HosAppointmentSys";
-		$conn = new mysqli($servername, $username, $password, $dbname);
+		$conn = new mysqli($servername, $username, $password, $dbname);*/
 		//echo "Mukesh";
-		if ($conn->connect_error) {
-		    die("Connection failed: " . $conn->connect_error);
+		define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST'));
+		define('DB_PORT', getenv('OPENSHIFT_MYSQL_DB_PORT'));
+		define('DB_USER', getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
+		define('DB_PASS', getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+		define('DB_NAME', getenv('OPENSHIFT_GEAR_NAME'));
+
+		/*$dbhost = constant("DB_HOST"); // Host name 
+		$dbport = constant("DB_PORT"); // Host port
+		$dbusername = constant("DB_USER"); // Mysql username 
+		$dbpassword = constant("DB_PASS"); // Mysql password 
+		$db_name = constant("DB_NAME"); // Database name 	*/
+		$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, "", DB_PORT) or die("Error: " . mysqli_error($conn));mysqli_select_db($conn, DB_NAME) or die("Error: " . mysqli_error($conn));
+		$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
+		if($conn->query($sql) === TRUE)
+		{
+			 echo "table created";
+			// header("Location: /app/adminDashboard.html");
+
 		}
 		$sql2 = "SELECT * FROM doctor";
 		$result = $conn->query($sql2);
