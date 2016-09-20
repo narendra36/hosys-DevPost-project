@@ -55,7 +55,13 @@
 		define('DB_USER', getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
 		define('DB_PASS', getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
 		define('DB_NAME', getenv('OPENSHIFT_GEAR_NAME'));
+		$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
+		//echo "OpenShift socket is [$openshiftsocket]";
 
+	if (isset($openshiftsocket)) {
+   		echo 'foo';
+   		ini_set('mysql.default_socket', $openshiftsocket);
+	}
 		/*$dbhost = constant("DB_HOST"); // Host name 
 		$dbport = constant("DB_PORT"); // Host port
 		$dbusername = constant("DB_USER"); // Mysql username 
