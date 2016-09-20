@@ -72,8 +72,7 @@
     getenv('OPENSHIFT_MYSQL_DB_USERNAME'), 
     getenv('OPENSHIFT_MYSQL_DB_HOST'), 
     getenv('OPENSHIFT_MYSQL_DB_PASSWORD'),
-    getenv('OPENSHIFT_MYSQL_DB_PORT')
-);
+    getenv('OPENSHIFT_MYSQL_DB_PORT'));
 		$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
 		if($conn->query($sql) === TRUE)
 		{
