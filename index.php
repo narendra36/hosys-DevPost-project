@@ -3,7 +3,7 @@
 ?>
 <html>
 <head>
-<title></title>
+<title>Hospital Appointment System</title>
 <link rel="stylesheet" type="text/css" href="design.css">
 
 <body>
