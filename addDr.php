@@ -1,7 +1,7 @@
 	<?php
-		$servername = "localhost";
+		$servername = "http://mysql-myapp.0ec9.hackathon.openshiftapps.com/opt/app-root/src/";
 		$username = "root";
-		$password = "";
+		$password = "root";
 		$dbname = "HosAppointmentSys";
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		//echo "Mukesh";
@@ -14,6 +14,14 @@
 		$drdept = $_POST["drdept"];
 		$drcabin = $_POST["drcabin"];
 		$drcontact = $_POST["drcontact"];
+		$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))"
+
+		if($conn->query($sql) === TRUE)
+		{
+			 echo "table created";
+			// header("Location: /app/adminDashboard.html");
+
+		}
 		$sql = "INSERT INTO doctor VALUES('".$id."','".$drname."','".$drdept."','".$drcabin."','".$drcontact."')";
 
 		if($conn->query($sql) === TRUE)

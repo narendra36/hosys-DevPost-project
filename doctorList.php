@@ -36,7 +36,7 @@
 <body>
 	<div class="head">
 		<ul>
-			<li><a class="icon" href="hospital.html">HOSPITAL APPOINTMENT SYSTEM</a></li> 
+			<li><a class="icon" href="index.php">HOSPITAL APPOINTMENT SYSTEM</a></li> 
 			<li><a class="SearchDoctor" href="docotrList.php">Search Doctor</a></li>
 			<li><a class="TakeAppointment" href="takeAppointment.html">Take Appointment</a></li>
 			<li><a class="TakeAppointment" href="adminPanel.html">Admin Panel</a></li>
@@ -44,9 +44,9 @@
 		</ul>
 	</div>
 	<?php
-		$servername = "localhost";
+		$servername = "http://mysql-myapp.0ec9.hackathon.openshiftapps.com/opt/app-root/src/";
 		$username = "root";
-		$password = "";
+		$password = "root";
 		$dbname = "HosAppointmentSys";
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		//echo "Mukesh";

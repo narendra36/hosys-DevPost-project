@@ -95,14 +95,14 @@
 	?>
 	<div class="head">
 		<ul>
-			<li><a class="icon" href="hospital.html">HOSPITAL APPOINTMENT SYSTEM</a></li> 
-			<li><a class="SearchDoctor" href="SearchDoctor.html">Search Doctor</a></li>
+			<li><a class="icon" href="index.php">HOSPITAL APPOINTMENT SYSTEM</a></li> 
+			<li><a class="SearchDoctor" href="doctorList.php">Search Doctor</a></li>
 			<li><a class="TakeAppointment" href="takeAppointment.html">Take Appointment</a></li>
 			<li style="float:right; margin-right:15px; padding-top:5px;" ><img src="../images/medicallogo.png" height="60px" width="70px"></li>
 		</ul>
 	</div>
 	<div class="btn">
-		<div class="adminbutton" ><a href="adminDashboard.html" ><p style="color:white">ADD DOCTOR</p></a></div> 
+		<div class="adminbutton" ><a href="adminDashboard.php" ><p style="color:white">ADD DOCTOR</p></a></div> 
 		<div class="adminbutton"><a href="doctorList.php"><p style="color:white">List of Doctors</p></a></div>
 		<div class="adminbutton" ><a href="patientList.php"><p style="color:white">List of Patient</p></a></div>
 		<div class="adminbutton"><a  href="adminPanel.html"><p style="color:white">Logout</p></a></div>

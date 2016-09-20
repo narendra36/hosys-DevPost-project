@@ -18,9 +18,9 @@ td{
 </style>
 <body>
 	<?php
-		$servername = "localhost";
+		$servername = "http://mysql-myapp.0ec9.hackathon.openshiftapps.com/opt/app-root/src/";
 		$username = "root";
-		$password = "";
+		$password = "root";
 		$dbname = "HosAppointmentSys";
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		//echo "Mukesh";
