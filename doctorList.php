@@ -67,7 +67,13 @@
 		$dbusername = constant("DB_USER"); // Mysql username 
 		$dbpassword = constant("DB_PASS"); // Mysql password 
 		$db_name = constant("DB_NAME"); // Database name 	*/
-		$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, "", DB_PORT) or die("Error: " . mysqli_error($conn));mysqli_select_db($conn, DB_NAME) or die("Error: " . mysqli_error($conn));
+		$conn = mysqli_connect(
+    getenv('OPENSHIFT_MYSQL_DB_HOST'), 
+    getenv('OPENSHIFT_MYSQL_DB_USERNAME'), 
+    getenv('OPENSHIFT_MYSQL_DB_HOST'), 
+    getenv('OPENSHIFT_MYSQL_DB_PASSWORD'),
+    getenv('OPENSHIFT_MYSQL_DB_PORT')
+);
 		$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
 		if($conn->query($sql) === TRUE)
 		{
