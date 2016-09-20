@@ -10,7 +10,7 @@
 		if($password=="adminlogin")
 		{
 			echo "login succesful";
-			header("Location: /app/adminDashboard.php");
+			header("Location: /adminDashboard.php");
 		}
 		else
 			echo "Username or Passwrod is wrong !";
