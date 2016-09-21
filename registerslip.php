@@ -18,7 +18,7 @@ td{
 </style>
 <body>
 	<?php
-		$servername = "http://mysql-myapp.0ec9.hackathon.openshiftapps.com/opt/app-root/src/";
+		/*$servername = "http://mysql-myapp.0ec9.hackathon.openshiftapps.com/opt/app-root/src/";
 		$username = "root";
 		$password = "root";
 		$dbname = "HosAppointmentSys";
@@ -26,7 +26,7 @@ td{
 		//echo "Mukesh";
 		if ($conn->connect_error) {
 		    die("Connection failed: " . $conn->connect_error);
-		}
+		}*/
 		$name = $_POST["tbName"];
 		$sex = $_POST["tbSex"];
 		$age = $_POST["tbAge"];
@@ -36,7 +36,7 @@ td{
 		$description = $_POST["tbDescription"];
 		$doctor = 10001;		
 		//echo "$name";
-		$sql = "INSERT INTO patient(name,age,contact,email,field,description,d_id,sex) VALUES('".$name."',".$age.",".$contact.",'".$email."','".$department."','".$description."','".$doctor."','".$sex."')";
+		/*$sql = "INSERT INTO patient(name,age,contact,email,field,description,d_id,sex) VALUES('".$name."',".$age.",".$contact.",'".$email."','".$department."','".$description."','".$doctor."','".$sex."')";
 
 		if($conn->query($sql) === TRUE)
 		{
@@ -54,16 +54,17 @@ td{
 		    	$dept = $row["dept"];
 		    	$cabin = $row["cabin"];
 		    	$drcontact = $row["contact"];
-		        /*echo "d_id: " . $row["d_id"]. " Name: " . $row["name"]. " dept : " . $row["dept"]." cabin : " . $row["cabin"]." contact : " . $row["contact"]. "<br>";*/
+		        echo "d_id: " . $row["d_id"]. " Name: " . $row["name"]. " dept : " . $row["dept"]." cabin : " . $row["cabin"]." contact : " . $row["contact"]. "<br>";
 		    }
 		} else {
 		    echo "0 results";
 		}
 		//echo $drname."<br>";
 		$conn->close();
-		//echo $drname."<br>";
+		//echo $drname."<br>";*/
 	?> 
 	<center>
+	<h3>there is a temporary problem to connect database<br>Sorry for the inconvenience !! </h3>
 	<div style="width:700px;height:900px;border:1px SOLID BLACK;background:url(../images/2.jpg)">
 		<img src="../images/logo.png" alt="Smiley face" width="100" height="100" align="left" style="padding-top:25px;"> 
 		<div style="margin-right:65px;padding-top:30px;">
