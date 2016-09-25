@@ -45,9 +45,9 @@
 	</div>
 	<?php
 		$servername = "mysql://OPENSHIFT_MYSQL_DB_USERNAME:OPENSHIFT_MYSQL_DB_PASSWORD@OPENSHIFT_MYSQL_DB_HOST:OPENSHIFT_MYSQL_DB_PORT";
-		$username = getenv("MYSQL_USER");
-		$password = getenv("MYSQL_PASSWORD");
-		$dbname = getenv("MYSQL_DATABASE");
+		$username = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+		$password = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+		$dbname = "sampledb";
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		//echo "Mukesh";
 		//$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
