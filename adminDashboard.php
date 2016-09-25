@@ -127,9 +127,7 @@
 	<?php
 		}
 		else
-			echo "You are trying to open it without admin permission !! :) ";
-		unset($_SESSION['uname']);
-		unset($_SESSION['pass']);
+			echo "You are trying to open it without admin permission !! ";
 		session_destroy();
 	?>
 </body>

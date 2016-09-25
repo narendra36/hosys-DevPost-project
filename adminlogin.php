@@ -5,9 +5,9 @@
 	//echo $username." : ".$password;
 	$_SESSION['uname']=$username;
 	$_SESSION['pass'] = $password;
-	if($username=="admin123")
+	if($username=="admin1234")
 	{
-		if($password=="adminlogin")
+		if($password=="adminpas")
 		{
 			echo "login succesful";
 			header("Location: /adminDashboard.php");

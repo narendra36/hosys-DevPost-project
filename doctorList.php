@@ -92,8 +92,7 @@
 		}
 		else
 			echo "There is somthing wrong !!";*/
-		//$sql ="insert into doctor values('14mi536','narendra','cse','S6','9882541148')";
-		$sql = "INSERT INTO `doctor` VALUES ('CARD550','KSHITI THAKUR','CARDIOLOGY','S6','9882112233'),('DENT534','MASHOOR GULATHI','DENTIST','F3','9882223355'),('ENT534','SATISH K PANDEY','E.N.T.','B0','9882224455'),('GYN101','SHIVI MANJUNATH','GYNAECOLOGY','S2','9882334455'),('NEU528','NAMRTA SHARMA','NEUROLOGY','S2','9882223344'),('SEX739','SAURABH UTKARSH','SEXOLOGIST','B6','9882338899'),('SUR920','ARPIT AGARWAL','SURGEN','G10','9882334499'),('SUR922','DR CHANDU','OTHER','G2','9882765433')";
+		/*$sql ="insert into doctor values('14mi536','narendra','cse','S6','9882541148')";
 		if($conn->query($sql) === TRUE)
 		{
 			 echo "data inserted succesfully";
@@ -101,7 +100,7 @@
 
 		}
 		else
-			echo "There is somthing wrong !!";
+			echo "There is somthing wrong !!";*/
 		$sql2 = "SELECT * FROM doctor";
 		$result = $conn->query($sql2);
 		//echo "Data from signup page : ".$name." ".$sex." ".$age." ".$contact." ".$email." ".$department." ".$description."<br>" ;
