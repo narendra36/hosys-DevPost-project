@@ -126,9 +126,11 @@
 	</div>
 	<?php
 		}
-		else
-			echo "You are trying to open it without admin permission !! ";
-		session_destroy();
+		else{
+	?>
+			<h1 style="color:white;margin-top:50px;text-align:center;">Try again !!</h1>
+	<?php
+		}
 	?>
 </body>
 </html>
