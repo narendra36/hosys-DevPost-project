@@ -44,16 +44,16 @@
 		</ul>
 	</div>
 	<?php
-		/*$servername = "http://mysql-myapp.0ec9.hackathon.openshiftapps.com/opt/app-root/src/";
-		$username = "root";
-		$password = "root";
-		$dbname = "HosAppointmentSys";
-		$conn = new mysqli($servername, $username, $password, $dbname);*/
+		$servername = "mysql://OPENSHIFT_MYSQL_DB_USERNAME:OPENSHIFT_MYSQL_DB_PASSWORD@OPENSHIFT_MYSQL_DB_HOST:OPENSHIFT_MYSQL_DB_PORT";
+		$username = getenv("MYSQL_USER");
+		$password = getenv("MYSQL_PASSWORD");
+		$dbname = getenv("MYSQL_DATABASE");
+		$conn = new mysqli($servername, $username, $password, $dbname);
 		//echo "Mukesh";
-		$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
+		//$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
 		//echo "OpenShift socket is [$openshiftsocket]";
 
-	if (isset($openshiftsocket)) {
+	/*if (isset($openshiftsocket)) {
    		echo 'foo';
    		ini_set('mysql.default_socket', $openshiftsocket);
 	}
@@ -63,12 +63,12 @@
 		$dbpassword = constant("DB_PASS"); // Mysql password 
 		$db_name = constant("DB_NAME"); // Database name 	*/
 
-$dbhost = getenv("MYSQL_SERVICE_HOST");
-$dbuser = getenv("MYSQL_USER");
-$dbpwd = getenv("MYSQL_PASSWORD");
-$dbname = getenv("MYSQL_DATABASE");
+		/*$dbhost = getenv("MYSQL_SERVICE_HOST");
+		$dbuser = getenv("MYSQL_USER");
+		$dbpwd = 
+		$dbname = 
 
-$conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+		$conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);*/
 		$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
 		if($conn->query($sql) === TRUE)
 		{
