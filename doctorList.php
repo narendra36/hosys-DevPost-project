@@ -104,7 +104,7 @@
 
 		}
 		else
-			echo "There is somthing wrong !!";*/			
+			echo "There is somthing wrong !!";		
 		$sql2 = "SELECT * FROM doctor";
 		$result = $conn->query($sql2);
 		//echo "Data from signup page : ".$name." ".$sex." ".$age." ".$contact." ".$email." ".$department." ".$description."<br>" ;
