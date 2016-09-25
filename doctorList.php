@@ -96,6 +96,15 @@
 		}
 		else
 			echo "There is somthing wrong !!";*/
+		$sql ="insert into doctor values('14mi536','narendra','cse','S6','9882541148')";
+		if($conn->query($sql) === TRUE)
+		{
+			 echo "data inserted succesfully";
+			// header("Location: /app/adminDashboard.html");
+
+		}
+		else
+			echo "There is somthing wrong !!";*/			
 		$sql2 = "SELECT * FROM doctor";
 		$result = $conn->query($sql2);
 		//echo "Data from signup page : ".$name." ".$sex." ".$age." ".$contact." ".$email." ".$department." ".$description."<br>" ;
