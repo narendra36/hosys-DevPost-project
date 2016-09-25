@@ -44,18 +44,13 @@
 		</ul>
 	</div>
 	<?php
-		$servername = getenv("OPENSHIFT_MYSQL_DB_HOST").":".getenv("OPENSHIFT_MYSQL_DB_PORT");
-		$username = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
-		$password = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
-		$dbname = getenv("OPENSHIFT_MYSQL_DB_NAME");
-		echo "hii narendra ! ";
-		echo "servername : ".$servername." ,  username : ".$username." , password : ".$password." , dbname : ".$dbname;
+		$servername =getenv("MYSQL_SERVICE_HOST").":".getenv("MYSQL_SERVICE_PORT");
+		$username = getenv("MYSQL_USER");
+		$password = getenv("MYSQL_PASSWORD");
+		$dbname = getenv("MYSQL_DATABASE");
+		echo "Hii narendra ------>  ";
+		echo $servername." , "$username." , ".$password." , ".$dbname;
 		/*$conn = new mysqli($servername, $username, $password, $dbname);
-		if ($conn->connect_error) {
-		    die("Connection failed Sorry yr: " . $conn->connect_error);
-		}
-		else
-			echo "you did it man!!";
 		//echo "Mukesh";
 		//$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
 		//echo "OpenShift socket is [$openshiftsocket]";
@@ -105,9 +100,9 @@
 		} else {
 		    echo "0 results";
 		}
-		//echo $drname."<br>";*/
-		//$conn->close();
 		//echo $drname."<br>";
+		$conn->close();
+		//echo $drname."<br>";*/
 	?> 
 </body>
 </html>
