@@ -45,9 +45,9 @@
 	</div>
 	<?php
 		$servername =getenv("MYSQL_SERVICE_HOST").":".getenv("MYSQL_SERVICE_PORT");
-		$username = getenv("MYSQL_USER")."1";
-		$password = getenv("MYSQL_PASSWORD")."2";
-		$dbname = getenv("MYSQL_DATABASE")."3";
+		$username = getenv("MYSQL_USER");
+		$password = getenv("MYSQL_PASSWORD");
+		$dbname = getenv("MYSQL_DATABASE");
 		echo "Hii narendra ------>  ";
 		echo $servername." , ".$username." , ".$password." , ".$dbname;
 		/*$conn = new mysqli($servername, $username, $password, $dbname);
