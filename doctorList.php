@@ -49,7 +49,7 @@
 		$password = getenv("MYSQL_PASSWORD");
 		$dbname = getenv("MYSQL_DATABASE");
 		echo "Hii narendra ------>  ";
-		echo $servername." , "$username." , ".$password." , ".$dbname;
+		echo $servername." , ".$username." , ".$password." , ".$dbname;
 		/*$conn = new mysqli($servername, $username, $password, $dbname);
 		//echo "Mukesh";
 		//$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
