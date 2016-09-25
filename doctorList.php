@@ -44,7 +44,22 @@
 		</ul>
 	</div>
 	<?php
-		$servername =getenv("MYSQL_SERVICE_HOST").":".getenv("MYSQL_SERVICE_PORT");
+		
+		$dbhost = getenv("MYSQL_SERVICE_HOST");
+		$dbport = getenv("MYSQL_SERVICE_PORT");
+		$dbuser = getenv("MYSQL_USER");
+		$dbpwd = getenv("MYSQL_PASSWORD");
+		$dbname = getenv("MYSQL_DATABASE");
+		$connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+		if ($connection->connect_errno) {
+		    printf("Connect failed: %s\n", $mysqli->connect_error);
+		    exit();
+		} 
+		else {
+		    printf("Connected to the database");
+		}
+		$connection->close();
+		/*$servername =getenv("MYSQL_SERVICE_HOST").":".getenv("MYSQL_SERVICE_PORT");
 		$username = getenv("MYSQL_USER");
 		$password = getenv("MYSQL_PASSWORD");
 		$dbname = getenv("MYSQL_DATABASE");
