@@ -127,10 +127,9 @@
 	<?php
 		}
 		else{
-	?>
-			<h1 style="color:white;margin-top:50px;text-align:center;">Try again !!</h1>
-	<?php
+				header("Location: /adminPanel.html");
 		}
+
 	?>
 </body>
 </html>
