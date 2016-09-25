@@ -106,7 +106,7 @@
 		    echo "0 results";
 		}
 		//echo $drname."<br>";*/
-		$conn->close();
+		//$conn->close();
 		//echo $drname."<br>";
 	?> 
 </body>
