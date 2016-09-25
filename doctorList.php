@@ -44,11 +44,16 @@
 		</ul>
 	</div>
 	<?php
-		$servername = "mysql://OPENSHIFT_MYSQL_DB_USERNAME:OPENSHIFT_MYSQL_DB_PASSWORD@OPENSHIFT_MYSQL_DB_HOST:OPENSHIFT_MYSQL_DB_PORT";
+		$servername = getenv("OPENSHIFT_MYSQL_DB_HOST").":".getenv("OPENSHIFT_MYSQL_DB_PORT");
 		$username = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 		$password = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
 		$dbname = "sampledb";
 		$conn = new mysqli($servername, $username, $password, $dbname);
+		if ($conn->connect_error) {
+		    die("Connection failed Sorry yr: " . $conn->connect_error);
+		}
+		else
+			echo "you did it man!!";
 		//echo "Mukesh";
 		//$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
 		//echo "OpenShift socket is [$openshiftsocket]";
@@ -69,7 +74,7 @@
 		$dbname = 
 
 		$conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);*/
-		$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
+		/*$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
 		if($conn->query($sql) === TRUE)
 		{
 			 echo "table created";
@@ -98,7 +103,7 @@
 		} else {
 		    echo "0 results";
 		}
-		//echo $drname."<br>";
+		//echo $drname."<br>";*/
 		$conn->close();
 		//echo $drname."<br>";
 	?> 
