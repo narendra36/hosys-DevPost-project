@@ -51,15 +51,15 @@
 		$dbpwd = getenv("MYSQL_PASSWORD");
 		$dbname = getenv("MYSQL_DATABASE");
 		//echo $dbhost." , ".$dbport." , ".$dbuser." , ".$dbpwd." , ".$dbname;
-		$connection = new mysqli($dbhost, "userCUK", "pyHOuqYJQyQPdxft","sampledb");
-		if ($connection->connect_errno) {
+		$conn = new mysqli($dbhost, "userCUK", "pyHOuqYJQyQPdxft","sampledb");
+		if ($conn->connect_errno) {
 		    printf("Connect failed: %s\n", $mysqli->connect_error);
 		    exit();
 		} 
 		else {
 		    printf("Connected to the database");
 		}
-		$connection->close();
+		//$connection->close();
 		/*$servername =getenv("MYSQL_SERVICE_HOST").":".getenv("MYSQL_SERVICE_PORT");
 		$username = getenv("MYSQL_USER");
 		$password = getenv("MYSQL_PASSWORD");
@@ -87,14 +87,16 @@
 		$dbname = 
 
 		$conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);*/
-		/*$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
+		$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
 		if($conn->query($sql) === TRUE)
 		{
 			 echo "table created";
 			// header("Location: /app/adminDashboard.html");
 
 		}
-		$sql2 = "SELECT * FROM doctor";
+		else
+			echo "There is somthing wrong !!";
+		/*$sql2 = "SELECT * FROM doctor";
 		$result = $conn->query($sql2);
 		//echo "Data from signup page : ".$name." ".$sex." ".$age." ".$contact." ".$email." ".$department." ".$description."<br>" ;
 		if ($result->num_rows > 0) {
@@ -116,9 +118,9 @@
 		} else {
 		    echo "0 results";
 		}
-		//echo $drname."<br>";
-		$conn->close();
 		//echo $drname."<br>";*/
+		$conn->close();
+		//echo $drname."<br>";
 	?> 
 </body>
 </html>
