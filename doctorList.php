@@ -87,7 +87,7 @@
 		$dbname = 
 
 		$conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);*/
-		$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
+		/*$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
 		if($conn->query($sql) === TRUE)
 		{
 			 echo "table created";
@@ -95,12 +95,13 @@
 
 		}
 		else
-			echo "There is somthing wrong !!";
-		/*$sql2 = "SELECT * FROM doctor";
+			echo "There is somthing wrong !!";*/
+		$sql2 = "SELECT * FROM doctor";
 		$result = $conn->query($sql2);
 		//echo "Data from signup page : ".$name." ".$sex." ".$age." ".$contact." ".$email." ".$department." ".$description."<br>" ;
 		if ($result->num_rows > 0) {
 		    // output data of each row
+
 		    ?>
 		<center><table style="border: 3px solid #f1f1f1;">
 			<tr><th>ID</th><th>Name</th><th>Departmnet</th><th>Cabin</th><th>Contact</th></th>
@@ -116,7 +117,7 @@
 		</table></center>    
 	<?php
 		} else {
-		    echo "0 results";
+		    echo "0 results table is empty";
 		}
 		//echo $drname."<br>";*/
 		$conn->close();
