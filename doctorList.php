@@ -87,7 +87,19 @@
 		$dbname = 
 
 		$conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);*/
-		/*$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
+		/*$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";*/
+		$sql="CREATE TABLE `patient` (
+  `p_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `age` int(11) NOT NULL,
+  `contact` int(20) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `field` varchar(50) NOT NULL,
+  `description` text,
+  `d_id` varchar(10) NOT NULL,
+  `dt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `sex` enum('M','F','O') DEFAULT NULL,
+  PRIMARY KEY (`p_id`))";
 		if($conn->query($sql) === TRUE)
 		{
 			 echo "table created";
@@ -95,7 +107,7 @@
 
 		}
 		else
-			echo "There is somthing wrong !!";*/
+			echo "There is somthing wrong !!";
 		/*$sql ="insert into doctor values('14mi536','narendra','cse','S6','9882541148')";
 		if($conn->query($sql) === TRUE)
 		{
@@ -105,7 +117,7 @@
 		}
 		else
 			echo "There is somthing wrong !!";	*/	
-		$sql2 = "SELECT * FROM doctor";
+		/*$sql2 = "SELECT * FROM doctor";
 		$result = $conn->query($sql2);
 		//echo "Data from signup page : ".$name." ".$sex." ".$age." ".$contact." ".$email." ".$department." ".$description."<br>" ;
 		if ($result->num_rows > 0) {
