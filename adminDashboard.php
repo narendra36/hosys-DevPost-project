@@ -130,6 +130,8 @@
 				header("Location: /adminPanel.html");
 		}
 
+		session_destroy();
+
 	?>
 </body>
 </html>
