@@ -1,27 +1,17 @@
 	<?php
-		$servername = "http://mysql-myapp.0ec9.hackathon.openshiftapps.com/opt/app-root/src/";
-		$username = "root";
-		$password = "root";
-		$dbname = "HosAppointmentSys";
-		$conn = new mysqli($servername, $username, $password, $dbname);
-		//echo "Mukesh";
-		if ($conn->connect_error) {
-		    die("Connection failed: " . $conn->connect_error);
-		}
-
+		$dbhost = getenv("MYSQL_SERVICE_HOST");
+		$dbport = getenv("MYSQL_SERVICE_PORT");
+		$dbuser = getenv("MYSQL_USER");
+		$dbpwd = getenv("MYSQL_PASSWORD");
+		$dbname = getenv("MYSQL_DATABASE");
+		//echo $dbhost." , ".$dbport." , ".$dbuser." , ".$dbpwd." , ".$dbname;
+		$conn = new mysqli($dbhost, "userCUK", "pyHOuqYJQyQPdxft","sampledb");
 		$id = $_POST["id"];
 		$drname = $_POST["drname"];
 		$drdept = $_POST["drdept"];
 		$drcabin = $_POST["drcabin"];
 		$drcontact = $_POST["drcontact"];
-		$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
-
-		if($conn->query($sql) === TRUE)
-		{
-			 echo "table created";
-			// header("Location: /app/adminDashboard.html");
-
-		}
+		
 		$sql = "INSERT INTO doctor VALUES('".$id."','".$drname."','".$drdept."','".$drcabin."','".$drcontact."')";
 
 		if($conn->query($sql) === TRUE)

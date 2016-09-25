@@ -52,13 +52,13 @@
 		$dbname = getenv("MYSQL_DATABASE");
 		//echo $dbhost." , ".$dbport." , ".$dbuser." , ".$dbpwd." , ".$dbname;
 		$conn = new mysqli($dbhost, "userCUK", "pyHOuqYJQyQPdxft","sampledb");
-		if ($conn->connect_errno) {
+		/*if ($conn->connect_errno) {
 		    printf("Connect failed: %s\n", $mysqli->connect_error);
 		    exit();
 		} 
 		else {
 		    printf("Connected to the database");
-		}
+		}*/
 		//$connection->close();
 		/*$servername =getenv("MYSQL_SERVICE_HOST").":".getenv("MYSQL_SERVICE_PORT");
 		$username = getenv("MYSQL_USER");
@@ -71,10 +71,6 @@
 		//$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
 		//echo "OpenShift socket is [$openshiftsocket]";
 
-	/*if (isset($openshiftsocket)) {
-   		echo 'foo';
-   		ini_set('mysql.default_socket', $openshiftsocket);
-	}
 		/*$dbhost = constant("DB_HOST"); // Host name 
 		$dbport = constant("DB_PORT"); // Host port
 		$dbusername = constant("DB_USER"); // Mysql username 
@@ -87,19 +83,7 @@
 		$dbname = 
 
 		$conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);*/
-		/*$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";*/
-		$sql="CREATE TABLE `patient` (
-  `p_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `age` int(11) NOT NULL,
-  `contact` int(20) NOT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `field` varchar(50) NOT NULL,
-  `description` text,
-  `d_id` varchar(10) NOT NULL,
-  `dt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `sex` enum('M','F','O') DEFAULT NULL,
-  PRIMARY KEY (`p_id`))";
+		/*$sql =" CREATE TABLE `doctor` (`d_id` varchar(10) NOT NULL,`name` varchar(50) NOT NULL,`dept` varchar(50) NOT NULL,`cabin` varchar(10) NOT NULL,`contact`varchar(20) NOT NULL,PRIMARY KEY (`d_id`))";
 		if($conn->query($sql) === TRUE)
 		{
 			 echo "table created";
@@ -107,8 +91,9 @@
 
 		}
 		else
-			echo "There is somthing wrong !!";
-		/*$sql ="insert into doctor values('14mi536','narendra','cse','S6','9882541148')";
+			echo "There is somthing wrong !!";*/
+		//$sql ="insert into doctor values('14mi536','narendra','cse','S6','9882541148')";
+		$sql = "INSERT INTO `doctor` VALUES ('CARD550','KSHITI THAKUR','CARDIOLOGY','S6','9882112233'),('DENT534','MASHOOR GULATHI','DENTIST','F3','9882223355'),('ENT534','SATISH K PANDEY','E.N.T.','B0','9882224455'),('GYN101','SHIVI MANJUNATH','GYNAECOLOGY','S2','9882334455'),('NEU528','NAMRTA SHARMA','NEUROLOGY','S2','9882223344'),('SEX739','SAURABH UTKARSH','SEXOLOGIST','B6','9882338899'),('SUR920','ARPIT AGARWAL','SURGEN','G10','9882334499'),('SUR922','DR CHANDU','OTHER','G2','9882765433')";
 		if($conn->query($sql) === TRUE)
 		{
 			 echo "data inserted succesfully";
@@ -116,8 +101,8 @@
 
 		}
 		else
-			echo "There is somthing wrong !!";	*/	
-		/*$sql2 = "SELECT * FROM doctor";
+			echo "There is somthing wrong !!";
+		$sql2 = "SELECT * FROM doctor";
 		$result = $conn->query($sql2);
 		//echo "Data from signup page : ".$name." ".$sex." ".$age." ".$contact." ".$email." ".$department." ".$description."<br>" ;
 		if ($result->num_rows > 0) {
@@ -140,7 +125,7 @@
 		} else {
 		    echo "0 results table is empty";
 		}
-		//echo $drname."<br>";*/
+		//echo $drname."<br>";
 		$conn->close();
 		//echo $drname."<br>";
 	?> 

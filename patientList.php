@@ -46,15 +46,13 @@
 		</ul>
 	</div>
 	<?php
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "HosAppointmentSys";
-		$conn = new mysqli($servername, $username, $password, $dbname);
-		//echo "Mukesh";
-		if ($conn->connect_error) {
-		    die("Connection failed: " . $conn->connect_error);
-		}
+		$dbhost = getenv("MYSQL_SERVICE_HOST");
+		$dbport = getenv("MYSQL_SERVICE_PORT");
+		$dbuser = getenv("MYSQL_USER");
+		$dbpwd = getenv("MYSQL_PASSWORD");
+		$dbname = getenv("MYSQL_DATABASE");
+		//echo $dbhost." , ".$dbport." , ".$dbuser." , ".$dbpwd." , ".$dbname;
+		$conn = new mysqli($dbhost, "userCUK", "pyHOuqYJQyQPdxft","sampledb");
 		$sql2 = "SELECT * FROM patient";
 		$result = $conn->query($sql2);
 		//echo "Data from signup page : ".$name." ".$sex." ".$age." ".$contact." ".$email." ".$department." ".$description."<br>" ;
