@@ -12,3 +12,5 @@ An OpenSource Smart Appointment system developed on LAMP Stack. Feel Free to con
     $ mysql -u username -p[pass] HosAppointmentSys < has.sql     
     
     Note: Create a database named **HosAppointmentSys** before running above command
+    
+**To visit go to the link :** http://myapp-myapp.0ec9.hackathon.openshiftapps.com/    
