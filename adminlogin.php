@@ -3,7 +3,7 @@
 	$username = $_POST["uname"];
 	$password = $_POST["psw"];
 	//echo $username." : ".$password;
-	$_SESSION['uname']="sessionActive";
+	$_SESSION['uname']=$username;
 	$_SESSION['pass'] = $password;
 	if($username=="admin1234")
 	{
