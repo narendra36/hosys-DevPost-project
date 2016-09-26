@@ -9,7 +9,7 @@
 	{
 		if($password=="adminpas")
 		{
-			echo "login succesful";
+			//echo "login succesful";
 			header("Location: /adminDashboard.php");
 		}
 		else
