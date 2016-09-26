@@ -88,7 +88,8 @@
 </style>
 <body onload="CaptchaChange()">
 	<?php
-		if(session_status() == PHP_SESSION_ACTIVE)
+		session_start()
+		if($_SESSION['uname']=="sessionActive")
 		{
 
 	?>
