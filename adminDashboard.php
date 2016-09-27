@@ -16,11 +16,6 @@
 		font-family: myfirst1;
 		src: url(Cabin-Regular.ttf);
 	}
-	body{
-	height: 100%;
-	background: linear-gradient(black,white);
-}
-
 	
 	.adminbutton{
 		 border: 3px solid #f1f1f1;
