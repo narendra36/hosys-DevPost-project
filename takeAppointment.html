@@ -20,25 +20,12 @@
 </div>
 <center>
 <div id="form">
-	
-	<div id="formL">
-		<div style="margin-top:15px;"><span>Register</span></div>
+		<div style="margin-top:15px;margin-bottom:10px;"><span>Register</span></div>
 		<form action="registerslip.php" method="POST">
-			<div id="formlLeftAside">
-				<div id="lable1">Name</div>
-				<div id="lable1">Sex</div>
-				<div id="lable1">Age</div>
-				<div id="lable1">Mobile</div>
-				<div id="lable1">Email</div>
-				<div id="lable1">Dept. </div>
-				
-			</div>
-
-			<div id=formlRightAside>
-				<div id="ll">
-					<div id="inputL">
-						<input type="text" name="tbName" placeholder="Name" required="required">
-					</div>	
+			<table>
+				<tr><td><div id="lable1">Name</div></td><td><div id="inputL">
+					<input type="text" name="tbName" placeholder="Name" required="required"></div></td></tr>
+				<tr><td><div id="lable1">Sex</div></td><td>
 					<div id="inputL">
 						<select required name="tbSex">
 							<option selected value="">---Select---</option>
@@ -46,17 +33,20 @@
 							<option value="F">FEMALE</option> 
 							<option value="O">OTHER</option>
 						</select>
-					</div>
+					</div></td></tr>
+				<tr><td><div id="lable1">Age</div></td><td>					
 					<div id="inputL">
 						<input type="number" name="tbAge" required="required" placeholder="Age">
-					</div>
+					</div></td></tr>
+				<tr><td><div id="lable1">Mobile</div></td><td>					
 					<div id="inputL">
 						<input type="number" name="tbMobile" required="required" placeholder="Mobile Number">
-					</div>
-
+					</div></td></tr>
+				<tr><td><div id="lable1">Email</div></td><td>					
 					<div id="inputL">
 						<input type="email" name="tbEmail" placeholder="Email">
-					</div>
+					</div></td></tr>
+				<tr><td><div id="lable1">Dept. </div></td><td>				
 					<div id="inputL">
 						<select required name="tbDept">
 							<option selected value="">---Select---</option>
@@ -66,22 +56,16 @@
 							<option value="E.N.T.">E.N.T.</option>
 							<option value="other">OTHER</option>
 						</select>
-					</div>
-
-					<div id="inputL">
-						<textarea rows="4" cols="50" name="tbDescription" placeholder="Descriptition of Problem in 5 or less words!"></textarea>
-					</div>
-					
+					</div></td></tr>
+			</table>			
+				<div id="inputL">
+					<textarea rows="4" cols="25" name="tbDescription" placeholder="Descriptition of Problem in 5 or less words!"></textarea>
 				</div>
-
-
-				
-			</div>
-			<button id="b1" type="submit"> <b>Register</b> </button>
-			<button id="b2" type="reset"> <b>Reset </b></button>		
+			<table>
+				<tr><td><button id="b1" type="submit"> <b style="padding:5px 35px;">Register</b> </button></td><td>					
+					<button id="b2" type="reset"> <b style="padding:5px 35px;">Reset </b></button></td></tr>				
+			</table>	
 		</form>
-	</div>
-
 </div>
 </center>
 </body>

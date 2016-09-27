@@ -29,7 +29,7 @@
 <hr >
 <div id="bottom" >
 	<div id="parti1" >
-		<img src="../images/baby.jpg" style="width:100%;padding-top:30px;height:58%">
+		<img src="../images/child.jpg" style="width:100%;padding-top:35px;">
 		<div id="child">
            <p>Children's Specialist</p>
            <hr>
@@ -45,7 +45,7 @@
 	<div id="parti3" >
 	    <img src="../images/man.jpg" style="width:100%;padding-top:30px;">
 		<div id="man">
-          <p>Men's Specialist</p>
+          <p>..Men's Specialist..</p>
           <hr>
         </div>
     </div>

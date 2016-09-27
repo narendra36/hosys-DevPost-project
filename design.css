@@ -175,7 +175,7 @@ ul {
 li {
     float: left;
     font-family: myFirstFont;
-    border-right: 1px solid #bbb;
+   
 }
 li:last-child {
     border-right: none;
@@ -193,6 +193,7 @@ li a {
 
 li a:hover:not(.icon) {
     background-color: #111;
+    border-bottom: 2px solid #0080ff;
 }
 
 .icon{
@@ -207,5 +208,95 @@ li a:hover:not(.icon) {
 .TakeAppointment{
     font-size: 18px;
 	
+}
+
+@media screen and (max-width: 1200px){
+	 #info{padding-top: 380px;}
+	 #backimage{height: 700px;}
+	 #parti1, #parti2, #parti3{
+	
+	margin-left: 75px;
+}
+	 
+}
+@media screen and (max-width: 1100px){
+	#bottom{height: 350px;
+	}
+	#about1{margin-left: 50px;
+		height: 150px;}
+  #about2{margin-left: 50px;
+  	height: 150px;}
+   #about3{margin-left: 50px;
+   	height:150px;}
+   #info{padding-top: 230px}
+ #backimage{height: 550px;}
+ #parti1, #parti2, #parti3{
+	
+	margin-left: 60px;
+}
+}
+@media screen and (max-width: 950px){
+	#bottom{height: 300px;
+	}
+}
+@media screen and (max-width: 800px) {
+    li{float: none;}
+    li a{padding: 10px 20px;}
+    #backimage{height: 300px;}
+    #main {margin-left: 216px;}
+    #upper p{font-size: 15px;}
+    #about1{width: 100%;
+	height: 60px;
+    margin-left: 0;
+    margin-top: 2px;
+font-size: 14px;}
+    #about2{width: 100%;
+	height: 60px;
+    margin-left: 0;
+margin-top: 2px;
+font-size: 14px;}
+    #about3{width: 100%;
+	height: 60px;
+    margin-left: 0;
+margin-top: 2px;
+font-size: 14px;}
+#info{padding-top: 150px}
+#bottom{height: 280px;}
+#parti1, #parti2, #parti3{
+	
+	margin-left: 55px;
+}
+li a:hover:not(.icon) {
+ 
+    border-bottom: 1px solid #0080ff;
+}
+
+}
+@media screen and (max-width: 700px){
+    #parti1, #parti2, #parti3{
+	
+	margin-left: 40px;
+}
+#bottom{height: 275px;}
+}
+@media screen and (max-width: 600px){
+    #parti1, #parti2, #parti3{
+	
+	margin-left: 35px;
+}
+#bottom{height: 260px;}
+}
+@media screen and (max-width: 500px){
+ #info{padding-top: 70px;}
+ #parti1, #parti2, #parti3{
+	
+	margin-left: 5px;
+	width:31%; 
+}
+#bottom{height: 265px;}
+#bottom1{padding-top:3px;
+padding-bottom: 3px;
+font-size: 10px;}
+ #info{padding-top: 40px;}
 }
 
