@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Admin Dashboard</title>
-	<link rel="stylesheet" type="text/css" href="form.css"></link>
+	<link rel="stylesheet" type="text/css" href="form.css">
 	<link rel="stylesheet" type="text/css" href="design.css">
 	<link type="text/javascript" href="captcha.js">
 	<meta charset="utf-8" name="viewport" content="width=device-width initial-scale=1.0">
@@ -16,9 +16,10 @@
 		font-family: myfirst1;
 		src: url(Cabin-Regular.ttf);
 	}
+	
 	.adminbutton{
 		 border: 3px solid #f1f1f1;
-		 width: 200px;
+		 width: 180px;
 		 height: 50px;
 		 background-color: #8e44ad;
 		 color: white;
@@ -31,7 +32,7 @@
 		float: left;
 	}
 	form {
-    border: 3px solid #f1f1f1;
+    border: 2px solid #f1f1f1;
     width: 500px;
     height: 500px;
     margin-top: 50px;
@@ -59,8 +60,9 @@
 
 	.imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
+   
 	}
+	
 
 	img.avatar {
     width: 40%;
@@ -74,16 +76,29 @@
 	font-family: myfirst1;
 	color: white;
 	}
-	span.psw {
-    float: right;
-    padding-top: 16px;
-	}
+	
 
 	@media screen and (max-width: 300px) {
     span.psw {
        display: block;
        float: none;
     }
+	}
+	@media screen and (max-width: 1000px){
+        div.adminbutton{
+        	float: left;
+        	width: 150px;
+        	margin-left: 3px;
+        	margin-top: 3px;
+        }
+        form{
+        	margin-top:155px;
+            }
+    }
+	@media screen and (max-width: 550px){
+		 form{
+        	  width: 95%; 
+        	}
 	}
 </style>
 <body onload="CaptchaChange()">
@@ -108,23 +123,25 @@
 		<div class="adminbutton" ><a href="patientList.php"><p style="color:white">List of Patient</p></a></div>
 		<div class="adminbutton"><a  href="adminPanel.html"><p style="color:white">Logout</p></a></div>
 	</div>
-	<div style="margin-left:30%;">
+	<center>
+	<div class="outer">
 	<form action="addDr.php" method="POST">
 	  <div class="container"> 
-	    <label class="textcolor"><b>ID</b></label>
+	    <label class="textcolor" style="float:left;"><b>ID</b></label>
 	    <input type="text" placeholder="Enter ID" name="id" required style="margin-bottom: 7px;margin-top: 7px;">
-		<label class="textcolor"><b>Name</b></label>
+		<label class="textcolor" style="float:left;"><b>Name</b></label>
 	    <input type="text" placeholder="Enter Name" name="drname" required style="margin-bottom: 7px;margin-top: 7px;">
-	    <label class="textcolor"><b>Department</b></label>
+	    <label class="textcolor" style="float:left;"><b>Department</b></label>
 	    <input type="text" placeholder="Enter Department" name="drdept" required style="margin-bottom: 7px;margin-top: 7px;">
-	    <label class="textcolor"><b>Contact</b></label><br>
-	    <input type="number" placeholder="Enter contact" name="drcontact" required style="margin-bottom: 7px;margin-top: 7px;"><br> 
-	    <label class="textcolor"><b>Cabin</b></label>
+	    <label class="textcolor" style="float:left;"><b>Contact</b></label><br>
+	    <input type="number" placeholder="Enter contact" name="drcontact" required style="margin-bottom: 7px;margin-top: 15px;"><br> 
+	    <label class="textcolor" style="float:left;"><b>Cabin</b></label>
 	    <input type="text" placeholder="Enter Cabin" name="drcabin" required style="margin-bottom: 5px;margin-top: 10px;">               
 	    <button type="submit" style="margin-bottom: 5px;margin-top: 30px;">ADD</button>
 	  </div>
 	</form>
 	</div>
+    </center>
 	<?php
 		}
 		else{
