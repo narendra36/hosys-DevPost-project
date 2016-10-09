@@ -83,6 +83,7 @@
        display: block;
        float: none;
     }
+
 	}
 	@media screen and (max-width: 1000px){
         div.adminbutton{
@@ -92,7 +93,7 @@
         	margin-top: 3px;
         }
         form{
-        	margin-top:155px;
+        	margin-top:230px;
             }
     }
 	@media screen and (max-width: 550px){

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Delete Doctor</title>
-	<link rel="stylesheet" type="text/css" href="form.css"></link>
+	<link rel="stylesheet" type="text/css" href="form.css">
 	<link rel="stylesheet" type="text/css" href="design.css">
 	<link type="text/javascript" href="captcha.js">
 	<meta charset="utf-8" name="viewport" content="width=device-width initial-scale=1.0">
@@ -16,9 +16,10 @@
 		font-family: myfirst1;
 		src: url(Cabin-Regular.ttf);
 	}
+	
 	.adminbutton{
 		 border: 3px solid #f1f1f1;
-		 width: 200px;
+		 width: 180px;
 		 height: 50px;
 		 background-color: #8e44ad;
 		 color: white;
@@ -31,7 +32,7 @@
 		float: left;
 	}
 	form {
-    border: 3px solid #f1f1f1;
+    border: 2px solid #f1f1f1;
     width: 500px;
     height: 500px;
     margin-top: 50px;
@@ -59,8 +60,9 @@
 
 	.imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
+   
 	}
+	
 
 	img.avatar {
     width: 40%;
@@ -74,16 +76,30 @@
 	font-family: myfirst1;
 	color: white;
 	}
-	span.psw {
-    float: right;
-    padding-top: 16px;
-	}
+	
 
 	@media screen and (max-width: 300px) {
     span.psw {
        display: block;
        float: none;
     }
+
+	}
+	@media screen and (max-width: 1000px){
+        div.adminbutton{
+        	float: left;
+        	width: 150px;
+        	margin-left: 3px;
+        	margin-top: 3px;
+        }
+        form{
+        	margin-top:230px;
+            }
+    }
+	@media screen and (max-width: 550px){
+		 form{
+        	  width: 100%; 
+        	}
 	}
 </style>
 <body onload="CaptchaChange()">
@@ -108,7 +124,7 @@
 		<div class="adminbutton" ><a href="patientList.php"><p style="color:white">List of Patient</p></a></div>
 		<div class="adminbutton"><a  href="adminPanel.html"><p style="color:white">Logout</p></a></div>
 	</div>
-	<div style="margin-left:30%;">
+	<div class="outer">
 	<form action="deleteDoctor.php" method="POST">
 	  <div class="container"> 
 	    <label class="textcolor"><b>ID</b></label>
