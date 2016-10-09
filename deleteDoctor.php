@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin Dashboard</title>
+	<title>Delete Doctor</title>
 	<link rel="stylesheet" type="text/css" href="form.css"></link>
 	<link rel="stylesheet" type="text/css" href="design.css">
 	<link type="text/javascript" href="captcha.js">
@@ -109,29 +109,37 @@
 		<div class="adminbutton"><a  href="adminPanel.html"><p style="color:white">Logout</p></a></div>
 	</div>
 	<div style="margin-left:30%;">
-	<form action="addDr.php" method="POST">
+	<form action="deleteDoctor.php" method="POST">
 	  <div class="container"> 
 	    <label class="textcolor"><b>ID</b></label>
 	    <input type="text" placeholder="Enter ID" name="id" required style="margin-bottom: 7px;margin-top: 7px;">
 		<label class="textcolor"><b>Name</b></label>
-	    <input type="text" placeholder="Enter Name" name="drname" required style="margin-bottom: 7px;margin-top: 7px;">
-	    <label class="textcolor"><b>Department</b></label>
-	    <input type="text" placeholder="Enter Department" name="drdept" required style="margin-bottom: 7px;margin-top: 7px;">
-	    <label class="textcolor"><b>Contact</b></label><br>
-	    <input type="number" placeholder="Enter contact" name="drcontact" required style="margin-bottom: 7px;margin-top: 7px;"><br> 
-	    <label class="textcolor"><b>Cabin</b></label>
-	    <input type="text" placeholder="Enter Cabin" name="drcabin" required style="margin-bottom: 5px;margin-top: 10px;">               
-	    <button type="submit" style="margin-bottom: 5px;margin-top: 30px;">ADD</button>
+	    <input type="text" placeholder="Enter Name" name="drname" required style="margin-bottom: 7px;margin-top: 7px;">              
+	    <button type="submit" style="margin-bottom: 5px;margin-top: 30px;">DELETE</button>
 	  </div>
 	</form>
 	</div>
 	<?php
-		}
-		else{
+		$dbhost = getenv("MYSQL_SERVICE_HOST");
+		$dbport = getenv("MYSQL_SERVICE_PORT");
+		$dbuser = getenv("MYSQL_USER");
+		$dbpwd = getenv("MYSQL_PASSWORD");
+		$dbname = getenv("MYSQL_DATABASE");
+		//echo $dbhost." , ".$dbport." , ".$dbuser." , ".$dbpwd." , ".$dbname;
+		$conn = new mysqli($dbhost, "userCUK", "pyHOuqYJQyQPdxft","sampledb");
+		$id = $_POST["id"];
+		$drname = $_POST["drname"];
+		//echo "id : ".$id." drname : ".$drname;
+		$sql2 = "DELETE FROM doctor where d_id='".$id."' and name='".$drname."'";
+		$result = $conn->query($sql2);
+		$conn->close();
+	}
+	else{
 				header("Location: /adminPanel.html");
 		}
 
-
 	?>
+<body>
 </body>
-</html>
+</html>	
+
