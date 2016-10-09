@@ -62,7 +62,6 @@
     text-align: center;
    
 	}
-	
 
 	img.avatar {
     width: 40%;
@@ -100,6 +99,7 @@
 		 form{
         	  width: 95%; 
         	}
+
 	}
 </style>
 <body onload="CaptchaChange()">

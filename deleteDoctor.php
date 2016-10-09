@@ -62,7 +62,6 @@
     text-align: center;
    
 	}
-	
 
 	img.avatar {
     width: 40%;
@@ -124,7 +123,8 @@
 		<div class="adminbutton" ><a href="patientList.php"><p style="color:white">List of Patient</p></a></div>
 		<div class="adminbutton"><a  href="adminPanel.html"><p style="color:white">Logout</p></a></div>
 	</div>
-	<div class="outer">
+	<center>
+	<div class="outer" >
 	<form action="deleteDoctor.php" method="POST">
 	  <div class="container"> 
 	    <label class="textcolor"><b>ID</b></label>
@@ -135,6 +135,7 @@
 	  </div>
 	</form>
 	</div>
+	</center>
 	<?php
 		$dbhost = getenv("MYSQL_SERVICE_HOST");
 		$dbport = getenv("MYSQL_SERVICE_PORT");
