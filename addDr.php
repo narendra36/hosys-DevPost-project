@@ -1,4 +1,7 @@
-	<?php
+<?php
+session_start();
+if(isset($_SESSION['uname']) && isset($_SESSION['pass']))
+{
 		$dbhost = getenv("MYSQL_SERVICE_HOST");
 		$dbport = getenv("MYSQL_SERVICE_PORT");
 		$dbuser = getenv("MYSQL_USER");
@@ -40,4 +43,9 @@
 		//echo $drname."<br>";
 		$conn->close();
 		//echo $drname."<br>";
-	?>
+}
+else{
+		echo "please login..!";
+		header("Location: /adminPanel.html");
+	}
+?>

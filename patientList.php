@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Doctor List</title>
+	<title>Patient List</title>
 	<link rel="stylesheet" type="text/css" href="form.css"></link>
 	<link rel="stylesheet" type="text/css" href="design.css">	
 </head>
@@ -36,6 +36,11 @@
 	}
 </style>
 <body>
+<?php
+	session_start();
+	if(isset($_SESSION['uname']) && isset($_SESSION['pass']))
+	{
+?>
 	<div class="head">
 		<ul>
 			<li><a class="icon" href="hospital.html">HOSPITAL APPOINTMENT SYSTEM</a></li> 
@@ -80,6 +85,9 @@
 		//echo $drname."<br>";
 		$conn->close();
 		//echo $drname."<br>";
+	}
+	else
+		header("Location: /adminPanel.html");
 	?> 
 </body>
 </html>

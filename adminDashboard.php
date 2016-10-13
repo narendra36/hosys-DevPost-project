@@ -1,8 +1,7 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 	<title>Admin Dashboard</title>
-	<link rel="stylesheet" type="text/css" href="form.css">
 	<link rel="stylesheet" type="text/css" href="design.css">
 	<link type="text/javascript" href="captcha.js">
 	<meta charset="utf-8" name="viewport" content="width=device-width initial-scale=1.0">
@@ -103,12 +102,14 @@
 	}
 </style>
 <body onload="CaptchaChange()">
-	<?php
-		session_start();
-		if(isset($_SESSION['uname'])&&isset($_SESSION['pass']))
-		{
-
-	?>
+<?php
+	session_start();
+	if(isset($_SESSION['uname']) && isset($_SESSION['pass']))
+	{
+		//echo "welcome..!".$_SESSION['uname']." your password ".$_SESSION['pass'];
+		//echo 'welcome $_SESSION['uname'] and your password $_SESSION['pass']<br><br><br>';
+?>
+	<link rel="stylesheet" type="text/css" href="form.css">
 	<div class="head">
 		<ul>
 			<li><a class="icon" href="index.php">HOSPITAL APPOINTMENT SYSTEM</a></li> 
@@ -122,7 +123,7 @@
 		<div class="adminbutton" ><a href="deleteDoctor.php" ><p style="color:white">Delete Doctor</p></a></div> 
 		<div class="adminbutton"><a href="doctorList.php"><p style="color:white">List of Doctors</p></a></div>
 		<div class="adminbutton" ><a href="patientList.php"><p style="color:white">List of Patient</p></a></div>
-		<div class="adminbutton"><a  href="adminPanel.html"><p style="color:white">Logout</p></a></div>
+		<div class="adminbutton"><a  href="logout.php"><p style="color:white">Logout</p></a></div>
 	</div>
 	<center>
 	<div class="outer">
@@ -143,13 +144,13 @@
 	</form>
 	</div>
     </center>
-	<?php
-		}
-		else{
-				header("Location: /adminPanel.html");
-		}
-
-
-	?>
+<?php
+	}
+	else
+	{
+		echo'<center style="margin-top:10%;font-size:50px;">Please Login..! To access admin panel</center>';
+		echo'<center style="margin-top:2%;font-size:40px;">Don\'t try to be oversmart :)</center>';
+	}
+?>
 </body>
 </html>

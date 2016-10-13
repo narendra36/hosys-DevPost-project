@@ -3,16 +3,13 @@
 	$username = $_POST["uname"];
 	$password = $_POST["psw"];
 	//echo $username." : ".$password;
-	$_SESSION['uname']=$username;
-	$_SESSION['pass'] = $password;
-	if($username=="admin1234")
+	if($username=="admin1234" && $password=="adminpas")
 	{
-		if($password=="adminpas")
-		{
 			//echo "login succesful";
-			header("Location: /adminDashboard.php");
-		}
-		else
-			echo "Username or Passwrod is wrong !";
+			$_SESSION['uname']=$username;
+			$_SESSION['pass'] = $password;
+			header("Location: /adminDashboard.php");		
 	}
+	else
+		echo '<center style="margin-top:10%;font-size:50px;">Username or Passwrod is/are wrong !</center>';
 ?>
