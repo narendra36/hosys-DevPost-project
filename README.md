@@ -14,3 +14,16 @@ An OpenSource Smart Appointment system developed on LAMP Stack. Feel Free to con
     Note: Create a database named **HosAppointmentSys** before running above command
     
 **To visit go to the link :** http://myapp-myapp.0ec9.hackathon.openshiftapps.com/    
+
+#Running the project:
+
+	Open connectionFile.php and edit the line:
+	$conn = new mysqli($dbhost, $dbuser, $dbpassword,$dbname);
+
+	where $dbuser is your database user, $dbpassword is the password you set on and $dbname is the name of your database
+
+	Using terminal open the directory where you have cloned the project and type in the following command:
+
+	$ php -S localhost:8888 -t hosys-DevPost-project/
+
+	In the browser URL type in: localhost:8888 and hit enter.
