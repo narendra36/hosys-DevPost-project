@@ -2,19 +2,19 @@
 <html>
 <head>
 	<title>AdminPanel</title>
-	<link rel="stylesheet" type="text/css" href="design.css">
-	<link rel="stylesheet" type="text/css" href="form.css">
+	<link rel="stylesheet" type="text/css" href="../css/design.css">
+	<link rel="stylesheet" type="text/css" href="../css/form.css">
 	<link type="text/javascript" href="captcha.js">
 	<meta charset="utf-8" name="viewport" content="width=device-width initial-scale=1.0">
 </head>
 <style>
 @font-face {
 	font-family: myfirst;
-	src: url(Dosis-Regular.ttf);
+	src: url(../font/Dosis-Regular.ttf);
 }
 @font-face {
 	font-family: myfirst1;
-	src: url(Cabin-Regular.ttf);
+	src: url(../font/Cabin-Regular.ttf);
 }
 form {
     border: 3px solid #f1f1f1;
@@ -77,17 +77,23 @@ span.psw {
 }
 </style>
 <body>
+<?php
+    session_start();
+    if(!isset($_SESSION['uname']) && !isset($_SESSION['pass']))
+    {
+        //echo "welcome..!".$_SESSION['uname']." your password ".$_SESSION['pass'];
+?>
 <div class="head">
 	<ul>
-		<li><a class="icon" href="index.php">HOSPITAL APPOINTMENT SYSTEM</a></li> 
-		<li><a class="SearchDoctor" href="doctorList.php">Search Doctor</a></li>
-		<li><a class="TakeAppointment" href="takeAppointment.html">Take Appointment</a></li>
-		<li><a class="TakeAppointment" href="adminPanel.html">Admin Panel</a></li>
+		<li><a class="icon" href="../index.php">HOSPITAL APPOINTMENT SYSTEM</a></li> 
+		<li><a class="SearchDoctor" href="../php/doctorList.php">Search Doctor</a></li>
+		<li><a class="TakeAppointment" href="../views/takeAppointment.html">Take Appointment</a></li>
+		<li><a class="TakeAppointment" href="../php/adminPanel.php">Admin Panel</a></li>
 		<li style="float:right; margin-right:15px; padding-top:5px;" ><img src="../images/medicallogo.png" height="60px" width="70px"></li>
 	</ul>
 </div>
 <center>
-<form action="adminlogin.php" method="POST">
+<form action="../php/adminlogin.php" method="POST">
   <div class="imgcontainer">
     <img src="../images/admin.jpeg" alt="Avatar" class="avatar">
   </div>
@@ -103,5 +109,12 @@ span.psw {
 </form>
 <p style="color:red;padding-top:20px;">* username 'admin1234' || password  'adminpas' </p>
 </center>
+<?php
+    }
+    else
+    {
+        header("Location: /php/adminDashboard.php");
+    }
+?>
 </body>
 </html>

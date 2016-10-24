@@ -2,18 +2,18 @@
 <html>
 <head>
 	<title>Admin Dashboard</title>
-	<link rel="stylesheet" type="text/css" href="design.css">
+	<link rel="stylesheet" type="text/css" href="../css/design.css">
 	<link type="text/javascript" href="captcha.js">
 	<meta charset="utf-8" name="viewport" content="width=device-width initial-scale=1.0">
 </head>
 <style type="text/css">
 	@font-face {
 	font-family: myfirst;
-	src: url(Dosis-Regular.ttf);
+	src: url(../font/Dosis-Regular.ttf);
 	}
 	@font-face {
 		font-family: myfirst1;
-		src: url(Cabin-Regular.ttf);
+		src: url(../font/Cabin-Regular.ttf);
 	}
 	
 	.adminbutton{
@@ -109,25 +109,25 @@
 		//echo "welcome..!".$_SESSION['uname']." your password ".$_SESSION['pass'];
 		//echo 'welcome $_SESSION['uname'] and your password $_SESSION['pass']<br><br><br>';
 ?>
-	<link rel="stylesheet" type="text/css" href="form.css">
+	<link rel="stylesheet" type="text/css" href="../css/form.css">
 	<div class="head">
 		<ul>
-			<li><a class="icon" href="index.php">HOSPITAL APPOINTMENT SYSTEM</a></li> 
-			<li><a class="SearchDoctor" href="doctorList.php">Search Doctor</a></li>
-			<li><a class="TakeAppointment" href="takeAppointment.html">Take Appointment</a></li>
+			<li><a class="icon" href="../index.php">HOSPITAL APPOINTMENT SYSTEM</a></li> 
+			<li><a class="SearchDoctor" href="../php/doctorList.php">Search Doctor</a></li>
+			<li><a class="TakeAppointment" href="../views/takeAppointment.html">Take Appointment</a></li>
 			<li style="float:right; margin-right:15px; padding-top:5px;" ><img src="../images/medicallogo.png" height="60px" width="70px"></li>
 		</ul>
 	</div>
 	<div class="btn">
-		<div class="adminbutton" ><a href="adminDashboard.php" ><p style="color:white">Add Doctor</p></a></div>
-		<div class="adminbutton" ><a href="deleteDoctor.php" ><p style="color:white">Delete Doctor</p></a></div> 
-		<div class="adminbutton"><a href="doctorList.php"><p style="color:white">List of Doctors</p></a></div>
-		<div class="adminbutton" ><a href="patientList.php"><p style="color:white">List of Patient</p></a></div>
-		<div class="adminbutton"><a  href="logout.php"><p style="color:white">Logout</p></a></div>
+		<div class="adminbutton" ><a href="../php/adminDashboard.php" ><p style="color:white">Add Doctor</p></a></div>
+		<div class="adminbutton" ><a href="../php/deleteDoctor.php" ><p style="color:white">Delete Doctor</p></a></div> 
+		<div class="adminbutton"><a href="../php/doctorList.php"><p style="color:white">List of Doctors</p></a></div>
+		<div class="adminbutton" ><a href="../php/patientList.php"><p style="color:white">List of Patient</p></a></div>
+		<div class="adminbutton"><a  href="../php/logout.php"><p style="color:white">Logout</p></a></div>
 	</div>
 	<center>
 	<div class="outer">
-	<form action="addDr.php" method="POST">
+	<form action="../php/addDr.php" method="POST">
 	  <div class="container"> 
 	    <label class="textcolor" style="float:left;"><b>ID</b></label>
 	    <input type="text" placeholder="Enter ID" name="id" required style="margin-bottom: 7px;margin-top: 7px;">
@@ -149,7 +149,7 @@
 	else
 	{
 		echo'<center style="margin-top:10%;font-size:50px;">Please Login..! To access admin panel</center>';
-		echo'<center style="margin-top:2%;font-size:40px;">Don\'t try to be oversmart :)</center>';
+		//echo'<center style="margin-top:2%;font-size:40px;">Don\'t try to be oversmart :)</center>';
 	}
 ?>
 </body>

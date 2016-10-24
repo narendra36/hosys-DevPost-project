@@ -4,15 +4,15 @@
 <html>
 <head>
 <title>Hospital Appointment System</title>
-<link rel="stylesheet" type="text/css" href="design.css">
+<link rel="stylesheet" type="text/css" href="../css/design.css">
 
 <body>
 <div class="head">
 	<ul>
 		<li><a class="icon" href="index.php">HOSPITAL APPOINTMENT SYSTEM</a></li> 
-		<li><a class="SearchDoctor" href="doctorList.php">Search Doctor</a></li>
-		<li><a class="TakeAppointment" href="takeAppointment.html">Take Appointment</a></li>
-		<li><a class="TakeAppointment" href="adminPanel.html">Admin Panel</a></li>
+		<li><a class="SearchDoctor" href="../php/doctorList.php">Search Doctor</a></li>
+		<li><a class="TakeAppointment" href="../views/takeAppointment.html">Take Appointment</a></li>
+		<li><a class="TakeAppointment" href="../php/adminPanel.php">Admin Panel</a></li>
 		<li style="float:right; margin-right:15px; padding-top:5px;" ><img src="../images/medicallogo.png" height="60px" width="70px"></li>
 	</ul>
 <p></p>

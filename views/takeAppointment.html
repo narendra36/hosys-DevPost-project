@@ -2,18 +2,18 @@
 <html>
 <link>
 	<title>TakeAppointment</title>
-	<link rel="stylesheet" type="text/css" href="form.css">
-	<link rel="stylesheet" type="text/css" href="design.css">
+	<link rel="stylesheet" type="text/css" href="../css/form.css">
+	<link rel="stylesheet" type="text/css" href="../css/design.css">
 	<link type="text/javascript" href="captcha.js">
 	<meta charset="utf-8" name="viewport" content="width=device-width initial-scale=1.0">
 </head>
 <body onload="CaptchaChange()">
 <div class="head">
 	<ul>
-		<li><a class="icon" href="index.php">HOSPITAL APPOINTMENT SYSTEM</a></li> 
-		<li><a class="SearchDoctor" href="doctorList.php">Search Doctor</a></li>
-		<li><a class="TakeAppointment" href="takeAppointment.html">Take Appointment</a></li>
-		<li><a class="TakeAppointment" href="adminPanel.html">Admin Panel</a></li>
+		<li><a class="icon" href="../index.php">HOSPITAL APPOINTMENT SYSTEM</a></li> 
+		<li><a class="SearchDoctor" href="../php/doctorList.php">Search Doctor</a></li>
+		<li><a class="TakeAppointment" href="../views/takeAppointment.html">Take Appointment</a></li>
+		<li><a class="TakeAppointment" href="../php/adminPanel.php">Admin Panel</a></li>
 		<li style="float:right; margin-right:15px; padding-top:5px;" ><img src="../images/medicallogo.png" height="60px" width="70px"></li>
 	</ul>
 <p></p>
@@ -21,7 +21,7 @@
 <center>
 <div id="form">
 		<div style="margin-top:15px;margin-bottom:10px;"><span>Register</span></div>
-		<form action="registerslip.php" method="POST">
+		<form action="../php/registerslip.php" method="POST">
 			<table>
 				<tr><td><div id="lable1">Name</div></td><td><div id="inputL">
 					<input type="text" name="tbName" placeholder="Name" required="required"></div></td></tr>

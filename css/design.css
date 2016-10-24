@@ -1,18 +1,18 @@
 @font-face {
     font-family: myFirstFont;
-    src: url(Dosis-Light.ttf);
+    src: url(../font/Dosis-Light.ttf);
 }
 @font-face {
     font-family: myFirstFont3;
-    src: url(Dosis-Regular.ttf);
+    src: url(../font/Dosis-Regular.ttf);
 }
 @font-face {
     font-family: myFirstFont1;
-    src: url(Cabin-Regular.ttf);
+    src: url(../font/Cabin-Regular.ttf);
 }
 @font-face {
     font-family: myFirstFont2;
-    src: url(Farsan-Regular.ttf);
+    src: url(../font/Farsan-Regular.ttf);
 }
 #backimage{
 background-image: url(../images/health.jpg);

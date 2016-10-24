@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION['uname']) && isset($_SESSION['pass']))
 {
-	include 'connectionFile.php';
+	include '../php/connectionFile.php';
 
 		$id = $_POST["id"];
 		$drname = $_POST["drname"];
@@ -16,7 +16,7 @@ if(isset($_SESSION['uname']) && isset($_SESSION['pass']))
 
 		if($conn->query($sql) === TRUE)
 		{
-			 echo "<script type='text/javascript'>alert('Doctor added successfully!');window.location.href='adminDashboard.php';</script>";
+			 echo "<script type='text/javascript'>alert('Doctor added successfully!');window.location.href='../php/adminDashboard.php';</script>";
 			// header("Location: /app/adminDashboard.html");
 
 		}
@@ -43,6 +43,6 @@ if(isset($_SESSION['uname']) && isset($_SESSION['pass']))
 }
 else{
 		echo "please login..!";
-		header("Location: /adminPanel.html");
+		header("Location: /php/adminPanel.php");
 	}
 ?>

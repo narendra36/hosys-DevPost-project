@@ -8,7 +8,7 @@
 			//echo "login succesful";
 			$_SESSION['uname']=$username;
 			$_SESSION['pass'] = $password;
-			header("Location: /adminDashboard.php");		
+			header("Location: /php/adminDashboard.php");		
 	}
 	else
 		echo '<center style="margin-top:10%;font-size:50px;">Username or Passwrod is/are wrong !</center>';

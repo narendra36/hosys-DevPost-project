@@ -18,7 +18,7 @@ td{
 </style>
 <body>
 	<?php
-	include 'connectionFile.php';
+	include '../php/connectionFile.php';
 
 		$name = $_POST["tbName"];
 		$sex = $_POST["tbSex"];
