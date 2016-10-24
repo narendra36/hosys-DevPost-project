@@ -12,6 +12,6 @@ $dbuser = getenv("MYSQL_USER");
 $dbpwd = getenv("MYSQL_PASSWORD");
 $dbname = getenv("MYSQL_DATABASE");
 //echo $dbhost." , ".$dbport." , ".$dbuser." , ".$dbpwd." , ".$dbname;
-$conn = new mysqli($dbhost, "root", "jalaz","HosAppointmentSys");
+$conn = new mysqli($dbhost, "userCUK", "pyHOuqYJQyQPdxft","sampledb");
 
 ?>
