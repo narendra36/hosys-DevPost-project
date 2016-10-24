@@ -51,13 +51,8 @@
 		</ul>
 	</div>
 	<?php
-		$dbhost = getenv("MYSQL_SERVICE_HOST");
-		$dbport = getenv("MYSQL_SERVICE_PORT");
-		$dbuser = getenv("MYSQL_USER");
-		$dbpwd = getenv("MYSQL_PASSWORD");
-		$dbname = getenv("MYSQL_DATABASE");
-		//echo $dbhost." , ".$dbport." , ".$dbuser." , ".$dbpwd." , ".$dbname;
-		$conn = new mysqli($dbhost, "userCUK", "pyHOuqYJQyQPdxft","sampledb");
+		include 'connectionFile.php';
+
 		$sql2 = "SELECT * FROM patient";
 		$result = $conn->query($sql2);
 		//echo "Data from signup page : ".$name." ".$sex." ".$age." ".$contact." ".$email." ".$department." ".$description."<br>" ;

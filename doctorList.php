@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Doctor List</title>
-	<link rel="stylesheet" type="text/css" href="form.css"></link>
+	<link rel="stylesheet" type="text/css" href="form.css">
 	<link rel="stylesheet" type="text/css" href="design.css">	
 </head>
 <style>
@@ -44,14 +44,9 @@
 		</ul>
 	</div>
 	<?php
-		
-		$dbhost = getenv("MYSQL_SERVICE_HOST");
-		$dbport = getenv("MYSQL_SERVICE_PORT");
-		$dbuser = getenv("MYSQL_USER");
-		$dbpwd = getenv("MYSQL_PASSWORD");
-		$dbname = getenv("MYSQL_DATABASE");
-		//echo $dbhost." , ".$dbport." , ".$dbuser." , ".$dbpwd." , ".$dbname;
-		$conn = new mysqli($dbhost, "userCUK", "pyHOuqYJQyQPdxft","sampledb");
+
+	include 'connectionFile.php';
+
 		/*if ($conn->connect_errno) {
 		    printf("Connect failed: %s\n", $mysqli->connect_error);
 		    exit();
@@ -109,7 +104,7 @@
 
 		    ?>
 		<center><table style="border: 3px solid #f1f1f1;">
-			<tr><th>ID</th><th>Name</th><th>Departmnet</th><th>Cabin</th><th>Contact</th></th>
+			<tr><th>ID</th><th>Name</th><th>Departmnet</th><th>Cabin</th><th>Contact</th></tr>
 	<?php		    
 		while($row = $result->fetch_assoc()) {
 

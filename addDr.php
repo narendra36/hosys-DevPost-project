@@ -2,18 +2,15 @@
 session_start();
 if(isset($_SESSION['uname']) && isset($_SESSION['pass']))
 {
-		$dbhost = getenv("MYSQL_SERVICE_HOST");
-		$dbport = getenv("MYSQL_SERVICE_PORT");
-		$dbuser = getenv("MYSQL_USER");
-		$dbpwd = getenv("MYSQL_PASSWORD");
-		$dbname = getenv("MYSQL_DATABASE");
-		//echo $dbhost." , ".$dbport." , ".$dbuser." , ".$dbpwd." , ".$dbname;
-		$conn = new mysqli($dbhost, "userCUK", "pyHOuqYJQyQPdxft","sampledb");
+	include 'connectionFile.php';
+
 		$id = $_POST["id"];
 		$drname = $_POST["drname"];
 		$drdept = $_POST["drdept"];
 		$drcabin = $_POST["drcabin"];
 		$drcontact = $_POST["drcontact"];
+
+
 		
 		$sql = "INSERT INTO doctor VALUES('".$id."','".$drname."','".$drdept."','".$drcabin."','".$drcontact."')";
 
