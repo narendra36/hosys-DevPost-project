@@ -12,8 +12,8 @@ An OpenSource Smart Appointment system developed on LAMP Stack. Feel Free to con
     $ mysql -u username -p[pass] HosAppointmentSys < has.sql     
     
     Note: Create a database named **HosAppointmentSys** before running above command
-    
-**To visit go to the link :** http://myapp-myapp.0ec9.hackathon.openshiftapps.com/    
+    kml
+**To visit go to the link :** http://shielded-gorge-27140.herokuapp.com/    
 
 #Running the project:
 
@@ -27,3 +27,9 @@ An OpenSource Smart Appointment system developed on LAMP Stack. Feel Free to con
 	$ php -S localhost:8888 -t hosys-DevPost-project/
 
 	In the browser URL type in: localhost:8888 and hit enter.
+
+**Screenshots : **
+![HomePage](./images/hs1.png?raw=true "Homepage")
+![AppointmentForm](./images/hs2.png?raw=true "form")
+![AdminDashboard](./images/hs3.png?raw=true "Admin")
+![Appointmentslip](./images/hs4.png?raw=true "slip")
